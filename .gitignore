@@ -1,0 +1,6 @@
+.github
+.idea
+package.json
+package-lock.json
+eslint.config.mjs
+node_modules
