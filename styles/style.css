@@ -6,7 +6,7 @@
     --font-size-text: 20px;
     --font-size-accent: 22px;
     --font-size-h: 100px;
-    --font-size-h2: 40px;
+    --font-size-h-section: 40px;
     --gap-size: 33px;
     --padding-large: 92px;
     --logo-width: 136px;
@@ -69,6 +69,10 @@
     list-style: circle;
 }
 
+.logo {
+    display: block;
+}
+
 .logo__image {
     min-width: var(--logo-width);
     min-height: var(--logo-height);
@@ -91,9 +95,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 757px;
+    min-height: 757px;
     padding: var(--cover-padding);
-    background: url("/images/cover.jpg") var(--primary-color);
+    background: url("../images/cover.jpg") var(--primary-color) center no-repeat;
     background-size: cover;
     color: var(--secondary-color);
 }
@@ -109,12 +113,7 @@
 }
 
 .cover__title > .aligned-text_center {
-    margin-top: 10px;
-    margin-right: 26px;
-}
-
-.cover__title > .aligned-text_right {
-    margin-right: -28px;
+    line-height: 134px;
 }
 
 .aligned-text {
@@ -153,6 +152,7 @@
     font-size: var(--font-size-accent);
     cursor: pointer;
     transition: background-color var(--transition), color var(--transition);
+    font-family: Raleway, sans-serif;
 }
 
 .bet-button:hover {
@@ -174,6 +174,10 @@
     letter-spacing: 60px;
 }
 
+.letter-spacing-reset {
+    letter-spacing: 1px;
+}
+
 .lots {
     display: flex;
     flex-direction: column;
@@ -183,7 +187,7 @@
 
 .lots__title {
     font-weight: bold;
-    font-size: var(--font-size-h2);
+    font-size: var(--font-size-h-section);
     margin-left: 40px;
     text-transform: uppercase;
 }
@@ -202,6 +206,7 @@
 
 .card-link {
     height: 100%;
+    text-decoration: none;
 }
 
 .card {
@@ -221,15 +226,18 @@
 }
 
 .card_type_film {
-    background: url("/images/card-lot-01.jpg") var(--primary-color);
+    background: url("../images/card-lot-01.jpg") var(--primary-color) center no-repeat;
+    background-size: cover;
 }
 
 .card_type_book {
-    background: url("/images/card-lot-02.jpg") var(--primary-color);
+    background: url("../images/card-lot-02.jpg") var(--primary-color) center no-repeat;
+    background-size: cover;
 }
 
 .card_type_picture {
-    background: url("/images/card-lot-03.jpg") var(--primary-color);
+    background: url("../images/card-lot-03.jpg") var(--primary-color) center no-repeat;
+    background-size: cover;
 }
 
 .card__title {
@@ -280,7 +288,7 @@
 
 .about__title {
     margin-top: 100px;
-    font-size: var(--font-size-h2);
+    font-size: var(--font-size-h-section);
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -291,12 +299,19 @@
     gap: 24px;
     margin-top: 100px;
     font-size: var(--font-size-accent);
+    letter-spacing: -1px;
+    line-height: 109%;
+}
+
+.about__text > p {
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 .footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 106px var(--aside-extended) 88px var(--aside-extended);
+    margin: 175px var(--aside-extended) 88px var(--aside-extended);
 }
 
 .footer > .contacts {
@@ -304,13 +319,24 @@
     gap: 6px;
 }
 
+.footer .contacts__wrapper {
+    gap: 6px;
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
+
 .footer__menu-list {
     display: flex;
     flex-direction: column;
     margin-top: 7px;
-    gap: 2px;
+    gap: 3px;
     text-align: center;
     list-style: none;
+    letter-spacing: 1px;
+}
+
+.footer__menu-list-item_active .link {
+    border-bottom: none;
 }
 
 .footer__social-list {
