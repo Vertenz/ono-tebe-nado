@@ -2,5 +2,8 @@
 .idea
 package.json
 package-lock.json
-eslint.config.mjs
 node_modules
+.stylelintignore
+.stylelintrc
+prettier.config.js
+eslint.config.mjs
