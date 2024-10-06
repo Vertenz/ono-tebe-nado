@@ -296,7 +296,7 @@
 .footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 106px var(--aside-extended) 0 var(--aside-extended);
+    margin: 106px var(--aside-extended) 88px var(--aside-extended);
 }
 
 .footer > .contacts {
